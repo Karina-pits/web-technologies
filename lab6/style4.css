@@ -1,0 +1,92 @@
+.wrapper {
+    width: 1140px;          
+    margin: 0 auto;         
+    padding: 20px;          
+    box-sizing: border-box;  
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    display: flex;
+    align-items: center;  
+    justify-content: space-between; 
+    margin-bottom: 20px;
+}
+
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  
+    gap: 5px;     
+}
+
+nav li a {
+    display: inline-block;
+    padding: 10px;
+    background: #c49494;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.block-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+  }
+
+  .block-item {
+    width: 250px; 
+    height: 300px; 
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 0 18px 25px 0; 
+    background-color: #ffffff;
+    border-radius: 8px; 
+    outline: 1px solid #2ecc71; 
+    text-align: center;
+}
+
+.img{
+   max-width: 100%;
+   display: block;  
+}
+
+.shadow-top-left{
+    box-shadow: -10px 0 10px 5px #2ecc71, -20px 0 20px -20px #2ecc71;
+}
+
+.shadow-soft-blur {
+    box-shadow: 0 0 10px 5px #2ecc71;
+}
+
+.shadow-top-right {
+    box-shadow: 5px 5px 5px #2ecc71;
+}
+
+.shadow-glow {
+    box-shadow: 0 10px  40px #2ecc71;
+}
+
+.shadow-four-sides {
+    box-shadow: 
+       0 -5px 1px 0px #178332,
+       5px 0 1px 0px #1d5094,
+        0 5px 1px 0px #f1c40f,
+        -5px 0 1px 0px #e0270e;
+}
+
+.shadow-two-sides {
+    box-shadow: 
+     0 -5px 1px 0px #178332,
+      0 5px 1px 0px #f1c40f;
+}
