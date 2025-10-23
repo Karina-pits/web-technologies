@@ -1,0 +1,49 @@
+
+a {
+  color: purple;
+}
+
+
+.main {
+  color: green;
+}
+
+
+.square-marker {
+  list-style-type: square;
+}
+
+
+.vegetables {
+  list-style-image: url("li.svg"); 
+}
+
+
+
+ul ul ul {
+  list-style: none;
+  padding-left: 0;   
+  margin-left: 0; 
+}
+
+
+.berries a {
+  text-decoration: none;
+}
+
+
+ol {
+  list-style-position: inside;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 40px;
+}
+
+
+
+

@@ -1,0 +1,27 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    color: red;
+}
+
+h2 {
+    font-style: italic;
+     margin-bottom: 10px;
+}
+
+li {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+hr {
+    background-color: green;
+    height: 4px;
+    width: 60%;
+    border: none;
+}
