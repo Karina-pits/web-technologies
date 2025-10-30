@@ -1,0 +1,221 @@
+body {
+    background-color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 620px;
+    border: 20px solid #868686;
+    padding: 0 20px 20px 20px;
+    margin: 50px auto;
+    background-image: url('images.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.form-title {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    margin: 20px 0;
+    height: 50px;
+    color: #7d21b3;
+}
+
+
+.form-title::before,
+.form-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    background-color: #e64a19; 
+}
+
+.form-title::before {
+    left: 20px;
+    width: 30%;
+}
+
+.form-title::after {
+    right: 20px;
+    width: 30%;
+}
+
+
+.form-title span.default-text,
+.form-title span.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+
+.form-title span.default-text {
+    opacity: 1;
+    color: #7d21b3;
+}
+
+.form-title span.hover-text {
+    opacity: 0;
+    color: pink;
+}
+
+
+.form-title:hover span.default-text {
+    opacity: 0;
+}
+
+.form-title:hover span.hover-text {
+    opacity: 1;
+}
+
+
+.form-title:hover::before,
+.form-title:hover::after {
+    background-color: #1eff00; 
+}
+
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+    border-radius: 10px;
+    opacity: 0.6;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 250px;
+    height: 30px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.about-me textarea {
+    width: 540px;
+    height: 46px;
+    padding: 5px;
+    display: block;
+}
+
+
+.form-group-row .form-field {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.form-group-row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover {
+    border-bottom: 4px solid #fbff00;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-bottom: 4px solid #ffa600;
+    opacity: 1;
+}
+
+input[type="password"]:hover {
+    border-bottom: 4px solid #1eff00;
+}
+
+input[type="password"]:focus {
+    border-bottom: 4px solid #00ffea;
+    opacity: 1;
+}
+
+.about-me textarea:hover {
+    box-shadow: 0 0 10px 10px rgba(233, 27, 154, 0.6);
+}
+
+.button-group {
+    text-align: right; 
+    margin-top: 30px;
+}
+
+.btn {
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.reset-btn {
+    color: #e64a19;
+    border: 3px solid #e64a19;
+}
+
+.ok-btn {
+    color: #0097a7;
+    border: 3px solid #0097a7;
+}
+
+.reset-btn:hover {
+    background-color: #e64a19;
+    color: white;
+    border-radius: 15px;
+}
+
+.ok-btn:hover {
+    background-color: #0097a7;
+    color: white;
+    border-radius: 15px;
+}
+
+.reset-btn:active {
+    background-color: #3d1407;
+    border: 3px solid #ecfd00;
+    border-radius: 25px;
+}
+
+.ok-btn:active {
+    background-color: #062427;
+    border: 3px solid #ecfd00;
+    border-radius: 25px;
+}
