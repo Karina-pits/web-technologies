@@ -1,0 +1,42 @@
+/* _header.scss */
+.header {
+  border-bottom: 1px solid #e6e6e6;
+  background: $bg;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px $container-padding;
+  }
+
+  .logo {
+    font-family: "Garamond", serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: $text;
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      gap: 12px;
+      list-style: none;
+    }
+
+    a {
+      color: $text;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 10px;
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+    }
+  }
+
+  /* mobile: collapse menu to column via CSS-only approach if needed later */
+}

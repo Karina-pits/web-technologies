@@ -1,0 +1,21 @@
+/* _hero.scss */
+.hero-section {
+  background-color: #eef0f2;
+  color: $muted;
+  padding: 40px $container-padding;
+  text-align: center;
+
+  .hero-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  @include respond(desktop) {
+    padding: 60px $container-padding;
+    .hero-title { font-size: 1.8rem; }
+  }
+}

@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #333;
+}
+
+.points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-nav li {
+  float: left;
+}
+
+.top-nav li.right {
+  float: right;
+}
+
+.icons {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.icons:hover {
+  background: #4caf50;
+}
+
+.icons .material-icons {
+  font-size: 24px;
+}
+
+
+.content {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+
+.side-nav {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 200px;
+  height: 800px;
+  background-color: #0d47a1;
+}
+
+.pointers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  position: relative;
+}
+
+.item {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.item:hover {
+  background: #1565c0;
+}
+
+.item .material-icons {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.side-nav .active > a {
+  background: #1e88e5;
+}
+
+.side-nav ul ul {
+  display: none;
+  background: #1976d2;
+}
+
+.side-nav li:hover > ul {
+  display: block;
+}
+
+.side-nav ul ul a {
+  padding-left: 30px;
+  font-size: 14px;
+}
+
+.side-nav ul ul ul {
+    display: none;
+    background: #1565c0;
+ }
+
+.side-nav ul ul li:hover > ul {
+     display: block; }
+
+.side-nav ul ul ul a {
+    padding-left: 50px;
+    font-size: 13px; }
+
+
+
+
+
+
+
+
+
+
+

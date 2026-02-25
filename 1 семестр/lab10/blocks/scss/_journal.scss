@@ -1,0 +1,43 @@
+/* _journal.scss */
+.journal {
+  padding: 24px $container-padding;
+
+  .journal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .journal-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex: 0 0 100px;
+    }
+
+    .journal-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: darken($muted, 10%);
+      margin-bottom: 6px;
+    }
+
+    .journal-title {
+      margin: 0 0 8px 0;
+      color: $main-color;
+    }
+  }
+
+  @include respond(desktop) {
+    .journal-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 40px;
+    }
+  }
+}

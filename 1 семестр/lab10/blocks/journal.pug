@@ -1,0 +1,11 @@
+section.journal
+  h2.section-title From the Journal
+
+  .journal-grid
+    - for (let i = 10; i <= 13; i++)
+      article.journal-item
+        img(src=`img/pic${i}.jpg`)
+        div
+          p.journal-meta Nov 14, 2025 / Identity
+          h3.journal-title Lorem ipsum
+          p.journal-text Lorem ipsum dolor sit amet...

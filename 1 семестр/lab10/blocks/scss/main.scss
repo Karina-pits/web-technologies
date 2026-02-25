@@ -1,0 +1,26 @@
+// scss/main.scss
+@import "reset";
+@import "variables";
+@import "mixins";
+
+/* Base (mobile-first) */
+@import "header";
+@import "hero";
+@import "works";
+@import "services";
+@import "journal";
+@import "footer";
+
+/* Responsive */
+@media (min-width: 577px) {
+  /* tablet+ adjustments can go here if needed */
+}
+
+@media (min-width: 769px) {
+  /* desktop rules (larger layout) */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

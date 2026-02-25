@@ -1,0 +1,11 @@
+mixin workImage(src)
+  img(src=src, alt="work")
+
+section.works
+  .works-header
+    h2.section-title Our Awesome Works
+    button.btn View More
+
+  .photo
+    - for (let i = 1; i <= 9; i++)
+      +workImage(`img/pic${i}.jpg`)

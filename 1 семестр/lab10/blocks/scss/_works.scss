@@ -1,0 +1,46 @@
+/* _works.scss */
+.works {
+  padding: 30px $container-padding;
+
+  .works-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    gap: 12px;
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $text;
+    }
+  }
+
+  .photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .work-image {
+    width: calc(50% - 20px);
+    height: auto;
+    border-radius: $radius;
+    transition: transform 0.25s ease;
+    margin: 8px 0;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  @include respond(desktop) {
+    .work-image {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin: 12px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+/* _footer.scss */
+.footer {
+  background: $dark;
+  color: #aaa;
+  padding: 20px $container-padding;
+  text-align: center;
+
+  .socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .social-icon {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
