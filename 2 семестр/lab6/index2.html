@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список завдань</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="todo.css" />
+</head>
+<body>
+ 
+  <div class="app-wrap">
+    <header class="todo-header">
+      <h1 class="todo-logo">Мої завдання</h1>
+      <div class="todo-stats" id="todoStats">0 завдань · 0 виконано</div>
+    </header>
+ 
+    <main class="todo-main">
+    
+      <form class="add-form" id="addForm" novalidate>
+        <div class="add-input-wrap">
+          <input
+            type="text"
+            id="newTaskInput"
+            placeholder="Введіть нове завдання…"
+            required
+            minlength="2"
+            maxlength="200"
+            autocomplete="off"
+          />
+          <span class="add-error" id="addError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">+ Додати</button>
+      </form>
+ 
+      
+      <div class="sort-bar">
+        <span class="sort-label">Сортувати:</span>
+        <div class="sort-buttons">
+          <button class="btn btn-sort" data-sort="createdAt">📅 За датою</button>
+          <button class="btn btn-sort" data-sort="done">✅ За станом</button>
+          <button class="btn btn-sort" data-sort="updatedAt">🔄 За оновленням</button>
+          <button class="btn btn-ghost btn-sm" id="resetSort">✕ Скинути</button>
+        </div>
+      </div>
+ 
+     
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <span class="empty-icon">📋</span>
+        <p>Список завдань порожній.<br />Додайте своє перше завдання!</p>
+      </div>
+ 
+      
+      <ul class="task-list" id="taskList" aria-label="Список завдань"></ul>
+    </main>
+  </div>
+ 
+  
+  <div class="modal-overlay" id="editModal" role="dialog" aria-modal="true" aria-labelledby="editModalTitle">
+    <div class="modal">
+      <button class="modal-close" id="editModalClose" aria-label="Закрити">&times;</button>
+      <h2 class="modal-title" id="editModalTitle">Редагувати завдання</h2>
+      <form id="editForm" novalidate>
+        <input type="hidden" id="editId" />
+        <div class="form-group">
+          <label for="editTaskInput">Текст завдання</label>
+          <textarea id="editTaskInput" rows="3" required minlength="2" maxlength="200" placeholder="Текст завдання…"></textarea>
+          <span class="field-error" id="editError"></span>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" id="editCancel">Скасувати</button>
+          <button type="submit" class="btn btn-primary">Зберегти</button>
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+  <div class="toast-container" id="toastContainer"></div>
+ 
+  <script src="todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Крамниця товарів</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ 
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="logo">Магазин</h1>
+      <div class="total-block">
+        <span class="total-label">Загальна вартість:</span>
+        <span class="total-value" id="totalValue">0 ₴</span>
+      </div>
+    </div>
+  </header>
+ 
+  <main class="main-content">
+    <aside class="sidebar">
+      <section class="filter-section">
+        <h2 class="sidebar-title">Фільтр</h2>
+        <div class="filter-buttons" id="filterButtons"></div>
+        <button class="btn btn-ghost btn-sm" id="resetFilter">✕ Скинути фільтр</button>
+      </section>
+ 
+      <section class="sort-section">
+        <h2 class="sidebar-title">Сортування</h2>
+        <div class="sort-buttons">
+          <button class="btn btn-sort" data-sort="price">↑↓ За ціною</button>
+          <button class="btn btn-sort" data-sort="createdAt">↑↓ За датою створення</button>
+          <button class="btn btn-sort" data-sort="updatedAt">↑↓ За датою оновлення</button>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="resetSort">✕ Скинути сортування</button>
+      </section>
+    </aside>
+ 
+    <section class="products-section">
+      <div id="emptyMessage" class="empty-message" style="display:none;">
+        <div class="empty-icon">🛒</div>
+        <p>Наразі список товарів пустий.<br/>Додайте новий товар.</p>
+      </div>
+      <ul class="product-list" id="productList"></ul>
+      <div class="add-btn-wrap">
+        <button class="btn btn-primary" id="openAddModal">+ Додати новий товар</button>
+      </div>
+    </section>
+  </main>
+ 
+
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Закрити">&times;</button>
+      <h2 class="modal-title" id="modalTitle">Додати товар</h2>
+      <form id="productForm" novalidate>
+        <input type="hidden" id="editId" />
+        <div class="form-group">
+          <label for="fieldName">Назва товару</label>
+          <input type="text" id="fieldName" placeholder="Напр. Зелений чай" required minlength="2" maxlength="80" />
+          <span class="field-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="fieldPrice">Ціна (₴)</label>
+          <input type="number" id="fieldPrice" placeholder="0.00" required min="0.01" step="0.01" />
+          <span class="field-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="fieldCategory">Категорія</label>
+          <select id="fieldCategory" required>
+            <option value="">— Оберіть категорію —</option>
+            <option value="Напої"> Напої</option>
+            <option value="Косметика"> Косметика</option>
+            <option value="Рослини"> Рослини</option>
+            <option value="Їжа"> Їжа</option>
+          </select>
+          <span class="field-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="fieldImage">URL зображення</label>
+          <input type="url" id="fieldImage" placeholder="https://..." required />
+          <span class="field-error"></span>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" id="modalCancel">Скасувати</button>
+          <button type="submit" class="btn btn-primary" id="modalSubmit">Зберегти</button>
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+
+  <div class="toast-container" id="toastContainer"></div>
+ 
+  <script src="product.js"></script>
+</body>
+</html>
