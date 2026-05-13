@@ -1,0 +1,86 @@
+:root {
+    --primary-bg: #fffdf0;
+    --container-bg: #ffffff;
+    --accent-yellow: #fde047;
+    --hover-yellow: #facc15;
+    --text-dark: #422006;
+    --border-color: #fef08a;
+    --error-red: #dc2626;
+    --success-green: #16a34a;
+    --eye-gray: #888888;
+}
+
+* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: var(--primary-bg); display: flex; justify-content: center; padding: 40px 20px; margin: 0; }
+
+.container {
+    background: var(--container-bg); width: 100%; max-width: 550px; padding: 30px;
+    border-radius: 16px; box-shadow: 0 10px 25px rgba(254, 240, 138, 0.4);
+    border: 1px solid var(--border-color);
+}
+
+.tabs { display: flex; margin-bottom: 25px; background: #fefce8; padding: 5px; border-radius: 12px; }
+.tab-btn {
+    flex: 1; padding: 12px; border: none; background: none; cursor: pointer;
+    font-weight: 600; color: #713f12; border-radius: 8px; transition: 0.3s;
+}
+.tab-btn.active { background: var(--accent-yellow); color: var(--text-dark); }
+
+.form-content { display: none; }
+.form-content.active { display: block; }
+
+.form-group { margin-bottom: 18px; }
+.form-row { display: flex; gap: 15px; }
+label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; color: #854d0e; }
+
+input, select {
+    width: 100%; padding: 12px; border: 2px solid #fef9c3; border-radius: 10px;
+    background-color: #fffdec; outline: none; transition: 0.2s;
+}
+
+input.valid { border-color: var(--success-green); } 
+input.invalid { border-color: var(--error-red); } 
+
+.error-msg { font-size: 11px; margin-top: 4px; display: block; min-height: 14px; font-weight: 500; }
+input.invalid + .error-msg { color: var(--error-red); } 
+
+.pass-wrapper { position: relative; }
+.toggle-pass {
+    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+    cursor: pointer; display: flex; align-items: center;
+}
+.toggle-pass svg {
+    stroke: var(--eye-gray); fill: none; stroke-width: 2;
+    stroke-linecap: round; stroke-linejoin: round;
+}
+
+.submit-btn {
+    width: 100%; padding: 14px; background: var(--accent-yellow); color: var(--text-dark);
+    border: none; border-radius: 10px; cursor: pointer; font-weight: 700; margin-top: 10px;
+}
+
+.form-group-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;            
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+
+.form-group-check input[type="checkbox"] {
+    width: auto;         
+    height: 18px;
+    width: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.form-group-check label {
+    margin-bottom: 0;    
+    cursor: pointer;
+    color: var(--text-dark);
+    font-size: 14px;
+    white-space: nowrap; 
+}
